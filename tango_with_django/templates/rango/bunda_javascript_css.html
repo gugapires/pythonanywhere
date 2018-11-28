@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<!-- isso é só um exemplo de como referenciar css e javascript no html
+ com django, depois tento passar isto parao index pag.39 -->
+
+{% load staticfiles %}
+<html>
+<head>
+<title>Rango</title>
+<!-- CSS -->
+<link rel="stylesheet" href="{% static "css/base.css" %}" />
+<!-- JavaScript -->
+<script src="{% static "js/jquery.js" %}"></script>
+</head>
+<body>
+<!-- Image -->
+<img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+</body>
+</html>

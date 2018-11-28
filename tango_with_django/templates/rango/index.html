@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- load staticfiles carrega os arquivos estaticos como imagens, etc-->
+<!-- que ele esta usando static file, acessando tanto o media como o static files
+esse final de porcentagem "%" indica que tem uma template tag dentre dele, ele combinara
+ o url especificado in STATIC_URL com images/rango.jpg to yield /static/images/rango.jpg -->
+{% load staticfiles %}
+<html>
+<head>
+    <title>Rango</title>
+</head>
+<body>
+    <h1>Rango diz...</h1>
+<!--div>
+    Olá Seu bunda mole! <br />
+    <!--strong>{{ boldmessage }}</strong-->
+    <!--br /-->
+<!--/div-->
+    <div>
+        {% if categories %}
+            <ul>
+                {% for category in categories %}
+                    <li>{{ category.name }}</li>
+                {% endfor  %}
+            </ul>
+        {% else %}
+            <strong> Não há nenhuma categoria presente! </strong>
+        {% endif %}
+    </div>
+
+    <div>
+    <!-- aqui eu evoco o static, lembre que isto é uma formalizaçao do template do django -->
+        <img src="{% static "images/rango.jpg" %}"
+             alt="Picture of Rango" />
+        <br/>
+        <hr>
+        <a href="/rango/about/">About</a><br />
+    <a href="/rango/teste/">Ir para testes</a>
+    </div>
+</body>
+</html>
