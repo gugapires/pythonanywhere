@@ -126,5 +126,5 @@ STATICFILES_DIRS = [STATIC_DIR, ] # lista dos caminhos os quais o django espera 
 STATIC_URL = '/static/'
 
 #Media files (upload, etc.)
-MEDIA_ROOT = '/home/miranda/twd_bsi_2018/tango_with_django_project/static' # de onde vai servir
+MEDIA_ROOT = '/home/miranda/pythonanywhere/tango_with_django_project/static' # de onde vai servir
 MEDIA_URL = '/media/' #o que ele vai servir
